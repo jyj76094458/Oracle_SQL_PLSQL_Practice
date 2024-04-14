@@ -153,3 +153,77 @@ SELECT empno, ename, sal
 FROM emp
 WHERE ename='smith';
 
+SELECT ename, hiredate
+FROM emp
+WHERE ename = 'SMITH';
+
+SELECT empno, ename, sal
+FROM emp
+WHERE hiredate = '80/12/17';
+
+SELECT empno, ename, sal
+FROM emp
+WHERE hiredate = 80/12/17;
+
+-- 날짜를 조회할 경우 날짜 부분에 작은따옴표를 반드시 사용해야함
+
+--
+검색 조건 쓸 때
+숫자 외에는 꼭 작은따옴표를 사용
+문자는 대소문자 구분, 날짜는 대소문자 구분이 없다.
+--
+
+SELECT ename, sal
+FROM emp
+WHERE deptno = 10;
+
+SELECT ename, sal, sal+100
+FROM emp
+WHERE deptno = 10;
+
+SELECT ename, sal, sal*1.1
+FROM emp
+WHERE deptno = 10;
+
+SELECT empno, ename, sal
+FROM emp
+WHERE sal >= 4000;
+
+SELECT empno, ename, sal
+FROM emp
+WHERE ename >= 'W' ;
+
+SELECT ename, hiredate
+FROM emp;
+
+SELECT ename, hiredate
+FROM emp
+WHERE hiredate >= '81/12/25';
+
+SELECT empno, ename, sal
+FROM emp
+WHERE sal BETWEEN 2000 AND 3000;
+
+--
+BETWEEN 연산자 주의사항
+1. 작은 값을 앞에, 큰 값을 뒤에 쓴다
+2. 두 값을 모두 포함하는 결과 출력
+--
+
+SELECT empno, ename, sal
+FROM emp
+WHERE sal >= 2000
+AND sal <= 3000 ;
+
+--
+출력 결과는 BETWEEN과 동일, 속도 면에서 이게 더 빠름
+BETWEEN 대신 위의 방법을 사용
+--
+
+SELECT ename FROM emp
+ORDER BY ename;
+
+SELECT ename FROM emp
+WHERE ename BETWEEN 'JAMES' AND 'MARTIN'
+ORDER BY ename;
+
