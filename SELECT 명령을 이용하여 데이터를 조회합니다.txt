@@ -227,3 +227,15 @@ SELECT ename FROM emp
 WHERE ename BETWEEN 'JAMES' AND 'MARTIN'
 ORDER BY ename;
 
+SELECT empno, ename, deptno
+FROM emp
+WHERE deptno IN (10,20);
+
+---
+
+LIKE와 함께 사용되는 기호 '%', '_'
+%: 글자 수 제한 없음(0개 포함)
+_(Underscore): 글자 수 한 글자
+
+---
+
