@@ -1,0 +1,83 @@
+SELECT * FROM emp;
+
+SELECT *
+FR
+OM emp;
+
+SELECT *
+FROM em
+p;
+
+SELECT em
+pno
+FROM emp;
+
+DESC dept;
+
+SELECT * FROM tab;
+
+SELECT empno, ename
+FROM emp;
+
+SELECT * FROM professor;
+
+SELECT name, 'good morning~~!' "Good Morning"
+FROM professor;
+
+SELECT dname,', it''s deptno : ', deptno "DNAME AND DEPTNO"
+FROM dept;
+
+SELECT dname, q'[, it's deptno : ]', deptno "DNAME AND DEPTNO"
+FROM dept;
+
+SELECT profno, name, pay
+FROM professor ;
+
+SELECT profno "Prof'NO" , name AS "Prof's NAME", pay Prof_Pay
+FROM professor;
+
+SELECT deptno FROM emp;
+
+SELECT DISTINCT deptno
+FROM emp;
+
+SELECT job, ename
+FROM emp
+ORDER BY 1 , 2;
+
+SELECT DISTINCT job, ename
+FROM emp
+ORDER BY 1, 2;
+
+SELECT job, DISTINCT ename
+FROM emp
+ORDER BY 1, 2;
+
+SELECT ename, job FROM emp;
+
+SELECT ename || job FROM emp;
+
+SELECT ename||' ''s job is '|| job "NAME AND JOB"
+FROM emp;
+
+-- 연습문제 1 --
+
+SELECT * FROM STUDENT;
+
+SELECT NAME||' ''s ID : '||ID||', WEIGHT is '||WEIGHT||'Kg' "ID AND WEIGHT"
+FROM STUDENT;
+
+-- 연습문제 2 --
+
+SELECT * FROM EMP;
+
+SELECT ENAME||'('||JOB||') , '||ENAME||''''||JOB||'''' "NAME AND JOB"
+FROM EMP;
+
+-- 연습문제 3 --
+
+SELECT * FROM EMP;
+
+SELECT ENAME||'''s sal is $'||SAL "Name and Sal"
+FROM emp;
+
